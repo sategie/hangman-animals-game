@@ -9,9 +9,15 @@ print("HANGMAN: Animals Version")
 
 name = input("Please enter your name: ")
 print("loading...")
-time.sleep(2)
+time.sleep(1)
 print(f"Welcome to the Hangman Animals game, {name}!\n")
 
-print(word_list)
+def random_word():
+    """
+    This gets a random word from the list of words
+    """
+    word = random.choice(word_list)
+    return word
 
+random_word()
 
