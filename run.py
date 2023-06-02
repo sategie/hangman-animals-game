@@ -23,18 +23,72 @@ def print_loading():
 
 def random_word(word_list):
     """
-    This gets a random word from the list of words
+    Gets a random word from the list of words.
     """
     word = random.choice(word_list)
     return word
 
+def print_remaining_lives(lives, used_letters):
+    """
+    Prints out a message showing how many lives the user has left.
+    Prints out a list of letters already guessed by the user.
+    """
+    print(
+    f"{lives} lives left. You have used these letters: {sorted([letter for letter in used_letters])}"
+  )
+
+def print_current_word(word, used_letters):
+    """
+    Checks if letter is in the used_letters set.
+    Prints out the letter if it is in the set.
+    Prints a dash if not
+    """
+    word_list = [letter if letter in used_letters else '-' for letter in word]
+    print(f"Current word: {' '.join(word_list)}")
+
+def get_user_guess(used_letters):
+    """
+    Checks if the entered letter is valid
+    """
+    while True:
+        user_letter = input("Guess a letter: ")
+        if len(user_letter) != 1:
+            print("\nPlease enter a single letter.")
+        elif user_letter in used_letters:
+            print("\nYou have already guessed that letter. Please try another letter.")
+        elif not user_letter.isalpha():
+            print("\nThat is not a letter. Please enter a letter.")
+        else:
+            return user.letter
+
+
+def check_guess(user_guess, word_letters):
+    """
+    Check if a user's guess is correct or not
+    Update the word_letters set variable accordingly
+    """
+    if user_guess in word_letters:
+        word_letters.remove(user_guess)
+        print("")
+        return True
+    else:
+        return False
+
+
 def play_hangman(name):
+    """
+    Main hangman function under which all other functions are called
+    """
     print_loading()
     print_welcome(name)
+
+    
 
 #Check if module is run as the main program and run the function
 if __name__ == "__main__":
   name = input("Please enter your name: ")
   play_hangman(name)
+
+
 
 
