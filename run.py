@@ -96,20 +96,22 @@ def play_hangman(name):
             if not check_guess(user_guess, word_letters):
                 lives -= 1
                 print(f"\nYour letter, {user_guess}, is not in the word.")
-        
 
+        #Code to display a message if there are no more lives left
+        if lives == 0:
+            print("Determining your fate...")
+            time.sleep(2)
+            print(f"Sorry, you got hanged :( The word was {word}.")
+        #Code to display a message if the user guessed the word correctly
+        else:  
+            print(f"Great job {name}! You guessed the correct word: {word}.")
 
-
-
-
-
-
-    
 
 #Check if module is run as the main program and run the function
 if __name__ == "__main__":
   name = input("Please enter your name: ")
   play_hangman(name)
+
 
 
 
