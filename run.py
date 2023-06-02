@@ -33,8 +33,7 @@ def print_remaining_lives(lives, used_letters):
     Prints out a message showing how many lives the user has left.
     Prints out a list of letters already guessed by the user.
     """
-    print(
-    f"{lives} lives left. You have used these letters: {sorted([letter for letter in used_letters])}"
+    print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in used_letters])}"
   )
 
 def print_current_word(word, used_letters):
@@ -59,7 +58,7 @@ def get_user_guess(used_letters):
         elif not user_letter.isalpha():
             print("\nThat is not a letter. Please enter a letter.")
         else:
-            return user.letter
+            return user_letter.lower()
 
 
 def check_guess(user_guess, word_letters):
@@ -82,12 +81,36 @@ def play_hangman(name):
     print_loading()
     print_welcome(name)
 
+    #Create a new hangman game with the defined variables and code each time a new game is started
+    while True:
+        word = random_word(word_list)
+        word_letters = set(word)
+        used_letters = set()
+        lives = 10
+        #Code in this while loop executes if lives are still left and if there are still letters in the word_letters set
+        while lives > 0 and word_letters:
+            print_remaining_lives(lives, used_letters)
+            print_current_word(word, used_letters)
+            user_guess = get_user_guess(used_letters)
+            used_letters.add(user_guess)
+            if not check_guess(user_guess, word_letters):
+                lives -= 1
+                print(f"\nYour letter, {user_guess}, is not in the word.")
+        
+
+
+
+
+
+
+
     
 
 #Check if module is run as the main program and run the function
 if __name__ == "__main__":
   name = input("Please enter your name: ")
   play_hangman(name)
+
 
 
 
