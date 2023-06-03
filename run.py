@@ -111,22 +111,19 @@ def play_hangman(name):
         while play_again != 'y' and play_again != 'n':
             print(f"Please enter 'y' or 'n'.")
             play_again = input("Do you want to play again? (y/n)").lower()
+        #Code to display if user does not want to play again
         if play_again != "y":
             print(f"Thanks for playing {name}!\n")
             print("HANGMAN: Animals Version")
             print("........................")
             name = input("Please enter your name: ")
             play_hangman(name)
-            
-           
+        #Code to display if user wants to play again
+        else:
+            print(f"\nWelcome back to the Hangman Animals game {name}!\n")
 
 #Check if module is run as the main program and run the function
 if __name__ == "__main__":
   name = input("Please enter your name: ")
   play_hangman(name)
-
-
-
-
-
 
