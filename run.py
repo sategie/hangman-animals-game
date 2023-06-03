@@ -28,24 +28,24 @@ def random_word(word_list):
     word = random.choice(word_list)
     return word
 
-def print_remaining_lives(lives, used_letters):
+def print_remaining_lives(lives, guessed_letters):
     """
     Prints out a message showing how many lives the user has left.
     Prints out a list of letters already guessed by the user.
     """
-    print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in used_letters])}"
+    print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in guessed_letters])}"
   )
 
-def print_current_word(word, used_letters):
+def print_current_word(word, guessed_letters):
     """
-    Checks if letter is in the used_letters set.
+    Checks if letter is in the guessed_letters set.
     Prints out the letter if it is in the set.
     Prints a dash if not
     """
-    word_list = [letter if letter in used_letters else '-' for letter in word]
+    word_list = [letter if letter in guessed_letters else '-' for letter in word]
     print(f"Current word: {' '.join(word_list)}")
 
-def get_user_guess(used_letters):
+def get_user_guess(guessed_letters):
     """
     Checks if the entered letter is valid
     """
@@ -53,7 +53,7 @@ def get_user_guess(used_letters):
         user_letter = input("Guess a letter: ")
         if len(user_letter) != 1:
             print(f"\nPlease enter only one letter.")
-        elif user_letter in used_letters:
+        elif user_letter in guessed_letters:
             print(f"\n'{user_letter}' has already been used. Please guess another letter.")
         elif not user_letter.isalpha():
             print(f"\n'{user_letter}' is not a letter. Please enter a letter.")
@@ -85,14 +85,14 @@ def play_hangman(name):
     while True:
         word = random_word(word_list)
         unique_letters_word = set(word)
-        used_letters = set()
-        lives = 10
+        guessed_letters = set()
+        lives = 6
         #Code in this while loop executes if lives are still left and if there are still letters in the unique_letters_word set
         while lives > 0 and unique_letters_word:
-            print_remaining_lives(lives, used_letters)
-            print_current_word(word, used_letters)
-            user_guess = get_user_guess(used_letters)
-            used_letters.add(user_guess)
+            print_remaining_lives(lives, guessed_letters)
+            print_current_word(word, guessed_letters)
+            user_guess = get_user_guess(guessed_letters)
+            guessed_letters.add(user_guess)
             if not check_guess(user_guess, unique_letters_word):
                 lives -= 1
                 print(f"\nYour letter, {user_guess}, is not in the word.")
@@ -107,11 +107,18 @@ def play_hangman(name):
             print(f"Great job {name}! You guessed the correct word: {word}.")
         #Code to run depending on if the user decides to play again or not
         play_again = input("Do you want to play again? (y/n) ").lower()
+        #Code to validate the y or n entry
+        while play_again != 'y' and play_again != 'n':
+            print(f"Please enter 'y' or 'n'.")
+            play_again = input("Do you want to play again? (y/n)").lower()
         if play_again != "y":
-            print(f"Thanks for playing {name}!")
-            pass
+            print(f"Thanks for playing {name}!\n")
+            print("HANGMAN: Animals Version")
+            print("........................")
+            name = input("Please enter your name: ")
+            play_hangman(name)
+            
            
-
 
 #Check if module is run as the main program and run the function
 if __name__ == "__main__":
