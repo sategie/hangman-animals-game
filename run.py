@@ -52,11 +52,11 @@ def get_user_guess(used_letters):
     while True:
         user_letter = input("Guess a letter: ")
         if len(user_letter) != 1:
-            print("\nPlease enter a single letter.")
+            print(f"\nPlease enter only one letter.")
         elif user_letter in used_letters:
-            print("\nYou have already guessed that letter. Please try another letter.")
+            print(f"\n'{user_letter}' has already been used. Please guess another letter.")
         elif not user_letter.isalpha():
-            print("\nThat is not a letter. Please enter a letter.")
+            print(f"\n'{user_letter}' is not a letter. Please enter a letter.")
         else:
             return user_letter.lower()
 
