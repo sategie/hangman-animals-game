@@ -1,18 +1,20 @@
-#Import random module to select random words
+# Import random module to select random words
 import random
-#Import time  module to create a delay at certain points
+# Import time  module to create a delay at certain points
 import time
-#Import list of words from words module
+# Import list of words from words module
 from words import word_list
 
 print("HANGMAN: Animals Version")
 print("........................")
+
 
 def print_welcome(name):
     """
     Function to display a welcome message after the user enters a name
     """
     print(f"Welcome to the Hangman Animals game, {name}!\n")
+
 
 def print_loading():
     """
@@ -21,12 +23,14 @@ def print_loading():
     print("loading...")
     time.sleep(1)
 
+
 def random_word(word_list):
     """
     Gets a random word from the list of words.
     """
     word = random.choice(word_list)
     return word
+
 
 def print_remaining_lives(lives, guessed_letters):
     """
@@ -36,6 +40,7 @@ def print_remaining_lives(lives, guessed_letters):
     print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in guessed_letters])}"
   )
 
+
 def print_current_word(word, guessed_letters):
     """
     Checks if letter is in the guessed_letters set.
@@ -44,6 +49,7 @@ def print_current_word(word, guessed_letters):
     """
     word_list = [letter if letter in guessed_letters else '-' for letter in word]
     print(f"Current word: {' '.join(word_list)}")
+
 
 def get_user_guess(guessed_letters):
     """
@@ -81,7 +87,7 @@ def play_hangman(name):
     print_loading()
     print_welcome(name)
 
-    #Create a new hangman game with the defined variables and code each time a new game is started
+    # Create a new hangman game with the defined variables and code each time a new game is started
     while True:
         word = random_word(word_list)
         unique_letters_word = set(word)
@@ -97,33 +103,37 @@ def play_hangman(name):
                 lives -= 1
                 print(f"\nYour letter, {user_guess}, is not in the word.")
 
-        #Code to display a message if there are no more lives left
+        # Code to display a message if there are no more lives left
         if lives == 0:
             print("Determining your fate...")
             time.sleep(2)
             print(f"Sorry, you got hanged :( The word was {word}.")
-        #Code to display a message if the user guessed the word correctly
-        else:  
+        # Code to display a message if the user guessed the word correctly
+        else:
             print(f"Great job {name}! You guessed the correct word: {word}.")
-        #Code to run depending on if the user decides to play again or not
+        # Code to run depending on if the user decides to play again or not
         play_again = input("Do you want to play again? (y/n) ").lower()
-        #Code to validate the y or n entry
+
+        # Code to validate the y or n entry
         while play_again != 'y' and play_again != 'n':
             print(f"Please enter 'y' or 'n'.")
             play_again = input("Do you want to play again? (y/n)").lower()
-        #Code to display if user does not want to play again
+        # Code to display if user does not want to play again
         if play_again != "y":
             print(f"Thanks for playing {name}!\n")
             print("HANGMAN: Animals Version")
             print("........................")
             name = input("Please enter your name: ")
             play_hangman(name)
-        #Code to display if user wants to play again
+        # Code to display if user wants to play again
         else:
             print(f"\nWelcome back to the Hangman Animals game {name}!\n")
 
-#Check if module is run as the main program and run the function
+# Check if module is run as the main program and run the function
+
+
 if __name__ == "__main__":
-  name = input("Please enter your name: ")
-  play_hangman(name)
+    name = input("Please enter your name: ")
+    play_hangman(name)
+
 
