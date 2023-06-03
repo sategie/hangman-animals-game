@@ -61,13 +61,13 @@ def get_user_guess(used_letters):
             return user_letter.lower()
 
 
-def check_guess(user_guess, word_letters):
+def check_guess(user_guess, unique_letters_word):
     """
     Check if a user's guess is correct or not
-    Update the word_letters set variable accordingly
+    Update the unique_letters_word set variable accordingly
     """
-    if user_guess in word_letters:
-        word_letters.remove(user_guess)
+    if user_guess in unique_letters_word:
+        unique_letters_word.remove(user_guess)
         print("")
         return True
     else:
@@ -84,16 +84,16 @@ def play_hangman(name):
     #Create a new hangman game with the defined variables and code each time a new game is started
     while True:
         word = random_word(word_list)
-        word_letters = set(word)
+        unique_letters_word = set(word)
         used_letters = set()
         lives = 10
-        #Code in this while loop executes if lives are still left and if there are still letters in the word_letters set
-        while lives > 0 and word_letters:
+        #Code in this while loop executes if lives are still left and if there are still letters in the unique_letters_word set
+        while lives > 0 and unique_letters_word:
             print_remaining_lives(lives, used_letters)
             print_current_word(word, used_letters)
             user_guess = get_user_guess(used_letters)
             used_letters.add(user_guess)
-            if not check_guess(user_guess, word_letters):
+            if not check_guess(user_guess, unique_letters_word):
                 lives -= 1
                 print(f"\nYour letter, {user_guess}, is not in the word.")
 
@@ -105,6 +105,12 @@ def play_hangman(name):
         #Code to display a message if the user guessed the word correctly
         else:  
             print(f"Great job {name}! You guessed the correct word: {word}.")
+        #Code to run depending on if the user decides to play again or not
+        play_again = input("Do you want to play again? (y/n) ").lower()
+        if play_again != "y":
+            print(f"Thanks for playing {name}!")
+            pass
+           
 
 
 #Check if module is run as the main program and run the function
