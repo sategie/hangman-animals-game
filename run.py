@@ -133,7 +133,11 @@ def play_hangman(name):
 
 
 if __name__ == "__main__":
-    name = input("Please enter your name: ")
-    play_hangman(name)
+    while True:
+        name = input("Please enter your name: ")
+        if name.isalpha():
+            play_hangman(name)
+        else:
+            print("Please enter only letters")
 
 
