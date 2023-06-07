@@ -133,11 +133,12 @@ def play_hangman(name):
 
 
 if __name__ == "__main__":
+    # Code to prompt user to enter only letters when entering the name
     while True:
         name = input("Please enter your name: ")
         if name.isalpha():
             play_hangman(name)
         else:
             print("Please enter only letters")
-
+-
 
