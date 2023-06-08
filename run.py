@@ -56,7 +56,7 @@ def get_user_guess(guessed_letters):
     Checks if the entered letter is valid
     """
     while True:
-        user_letter = input("Guess a letter: ")
+        user_letter = input("Guess a letter: ").strip()
         if len(user_letter) != 1:
             print(f"\nPlease enter only one letter.")
         elif user_letter in guessed_letters:
@@ -112,18 +112,18 @@ def play_hangman(name):
         else:
             print(f"Great job {name}! You guessed the correct word: {word}.")
         # Code to run depending on if the user decides to play again or not
-        play_again = input("Do you want to play again? (y/n) ").lower()
+        play_again = input("Do you want to play again? (y/n) ").lower().strip()
 
         # Code to validate the y or n entry
         while play_again != 'y' and play_again != 'n':
             print(f"Please enter 'y' or 'n'.")
-            play_again = input("Do you want to play again? (y/n)").lower()
+            play_again = input("Do you want to play again? (y/n)").lower().strip()
         # Code to display if user does not want to play again
         if play_again != "y":
             print(f"Thanks for playing {name}!\n")
             print("HANGMAN: Animals Version")
             print("........................")
-            name = input("Please enter your name: ")
+            name = input("Please enter your name: ").strip()
             play_hangman(name)
         # Code to display if user wants to play again
         else:
@@ -135,10 +135,8 @@ def play_hangman(name):
 if __name__ == "__main__":
     # Code to prompt user to enter only letters when entering the name
     while True:
-        name = input("Please enter your name: ")
+        name = input("Please enter your name: ").strip()
         if name.isalpha():
             play_hangman(name)
         else:
             print("Please enter only letters")
--
-
