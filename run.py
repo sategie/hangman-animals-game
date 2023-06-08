@@ -5,9 +5,6 @@ import time
 # Import list of words from words module
 from words import word_list
 
-print("HANGMAN: Animals Version")
-print("........................")
-
 
 def print_welcome(name):
     """
@@ -133,6 +130,8 @@ def play_hangman(name):
 
 
 if __name__ == "__main__":
+    print("HANGMAN: Animals Version")
+    print("........................")
     # Code to prompt user to enter only letters when entering the name
     while True:
         name = input("Please enter your name: ").strip()
