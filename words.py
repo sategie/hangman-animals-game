@@ -51,6 +51,6 @@ word_list = [
   "zebra",
   "mouse",
   "cheetah",
-  "eagle",
+  "eagle"
 ]
 

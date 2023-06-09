@@ -31,8 +31,14 @@ def random_word(word_list):
 
 def print_remaining_lives(lives, guessed_letters):
     """
+    Takes two parameters:
+    lives: integer showing the number of remaining lives
+    guessed letters: list of letters already guessed
+
     Prints out a message showing how many lives the user has left.
     Prints out a list of letters already guessed by the user.
+
+    The sorted method in the print statement sorts out the guessed letters alphabetically
     """
     print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in guessed_letters])}"
   )
@@ -40,9 +46,16 @@ def print_remaining_lives(lives, guessed_letters):
 
 def print_current_word(word, guessed_letters):
     """
-    Checks if letter is in the guessed_letters set.
-    Prints out the letter if it is in the set.
-    Prints a dash if not
+    Creates a new list 'word_list' using list comprehension which does the following:
+    Iterates over each letter in the random word
+    Checks if the letter is available in the guessed_letters list
+    Adds the letter to word_list if it is available in guessed_letters list.
+    Adds a dash to word_list if the letter is not available in the guessed_letters list.
+    
+    When the iteration is completed, it prints the word_list
+
+    The join method is used to create a single string from the individual elements in word_list
+    The empty string with the space ' ' is the delimiter and this creates spacing between the individual letters in the string.
     """
     word_list = [letter if letter in guessed_letters else '-' for letter in word]
     print(f"Current word: {' '.join(word_list)}")
@@ -50,7 +63,10 @@ def print_current_word(word, guessed_letters):
 
 def get_user_guess(guessed_letters):
     """
-    Checks if the entered letter is valid
+    Checks if the entered letter is valid.
+
+    Prints messages if the guess is invalid.
+    Returns the letter in lower case if the guess is valid
     """
     while True:
         user_letter = input("Guess a letter: ").strip()
@@ -66,8 +82,16 @@ def get_user_guess(guessed_letters):
 
 def check_guess(user_guess, unique_letters_word):
     """
-    Check if a user's guess is correct or not
-    Update the unique_letters_word set variable accordingly
+    Takes the following parameters:
+    user_guess: The letter guessed by the user.
+    unique_letters_word: The word set chosen at random from word_list
+
+    Checks if a user's guess is correct or not.
+    Updates the unique_letters_word set variable accordingly.
+
+    Returns a boolean:
+    True if the guessed letter is in the word set.
+    False if the guessed letter is not in the word set
     """
     if user_guess in unique_letters_word:
         unique_letters_word.remove(user_guess)
