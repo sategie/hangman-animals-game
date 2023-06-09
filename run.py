@@ -65,7 +65,7 @@ def get_user_guess(guessed_letters):
     """
     Checks if the entered letter is valid.
 
-    Prints messages if the guess is invalid.
+    Prints messages alerting the user if the guess is invalid.
     Returns the letter in lower case if the guess is valid
     """
     while True:
@@ -83,8 +83,8 @@ def get_user_guess(guessed_letters):
 def check_guess(user_guess, unique_letters_word):
     """
     Takes the following parameters:
-    user_guess: The letter guessed by the user.
-    unique_letters_word: The word set chosen at random from word_list
+    user_guess: The letter guessed by the user after validation.
+    unique_letters_word: The word set chosen at random from word_list which contains all unique letters in the word.
 
     Checks if a user's guess is correct or not.
     Updates the unique_letters_word set variable accordingly.
