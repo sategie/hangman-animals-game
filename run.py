@@ -104,6 +104,10 @@ def check_guess(user_guess, unique_letters_word):
 def play_hangman(name):
     """
     Main hangman function under which all other functions are called
+
+    Takes only one parameter: The name of the user
+
+    Each code block is explained using single line comments
     """
     print_loading()
     print_welcome(name)
