@@ -41,7 +41,8 @@ def print_remaining_lives(lives, guessed_letters):
     The sorted method in the print statement
     sorts out the guessed letters alphabetically
     """
-    print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in guessed_letters])}")
+    print(f"{lives} lives left. You have used these letters: "
+          f"{sorted([letter for letter in guessed_letters])}")
 
 
 def print_current_word(word, guessed_letters):
@@ -62,7 +63,8 @@ def print_current_word(word, guessed_letters):
     The empty string with the space ' ' is the delimiter and
     this creates spacing between the individual letters in the string.
     """
-    word_list = [letter if letter in guessed_letters else '-' for letter in word]
+    word_list = [letter if letter in guessed_letters
+                 else '-' for letter in word]
     print(f"Current word: {' '.join(word_list)}")
 
 
@@ -78,7 +80,8 @@ def get_user_guess(guessed_letters):
         if len(user_letter) != 1:
             print(f"\nPlease enter only one letter.")
         elif user_letter in guessed_letters:
-            print(f"\n'{user_letter}' has already been used. Please guess another letter.")
+            print(f"\n'{user_letter}' has already been used. "
+                  f"Please guess another letter.")
         elif not user_letter.isalpha():
             print(f"\n'{user_letter}' is not a letter. Please enter a letter.")
         else:
@@ -150,7 +153,8 @@ def play_hangman(name):
         # Code to validate the y or n entry
         while play_again != 'y' and play_again != 'n':
             print(f"Please enter 'y' or 'n'.")
-            play_again = input("Do you want to play again? (y/n)").lower().strip()
+            play_again = input("Do you want to play again? "
+                               "(y/n)").lower().strip()
         # Code to display if user does not want to play again
         if play_again != "y":
             print(f"Thanks for playing {name}!\n")
