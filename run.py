@@ -1,6 +1,6 @@
 # Import random module to select random words
 import random
-# Import time  module to create a delay at certain points
+# Import time module to create a delay at certain points
 import time
 # Import list of words from words module
 from words import word_list
@@ -38,24 +38,29 @@ def print_remaining_lives(lives, guessed_letters):
     Prints out a message showing how many lives the user has left.
     Prints out a list of letters already guessed by the user.
 
-    The sorted method in the print statement sorts out the guessed letters alphabetically
+    The sorted method in the print statement
+    sorts out the guessed letters alphabetically
     """
-    print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in guessed_letters])}"
-  )
+    print(f"{lives} lives left. You have used these letters: {sorted([letter for letter in guessed_letters])}")
 
 
 def print_current_word(word, guessed_letters):
     """
-    Creates a new list 'word_list' using list comprehension which does the following:
-    Iterates over each letter in the random word
-    Checks if the letter is available in the guessed_letters list
-    Adds the letter to word_list if it is available in guessed_letters list.
-    Adds a dash to word_list if the letter is not available in the guessed_letters list.
-    
+    Creates a new list 'word_list' using list comprehension
+    which does the following:
+    - Iterates over each letter in the random word
+    - Checks if the letter is available in the guessed_letters list
+    - Adds the letter to word_list if it is available in guessed_letters list.
+    - Adds a dash to word_list if the letter is not available
+      in the guessed_letters list.
+
     When the iteration is completed, it prints the word_list
 
-    The join method is used to create a single string from the individual elements in word_list
-    The empty string with the space ' ' is the delimiter and this creates spacing between the individual letters in the string.
+    The join method is used to create a single string
+    from the individual elements in word_list.
+
+    The empty string with the space ' ' is the delimiter and
+    this creates spacing between the individual letters in the string.
     """
     word_list = [letter if letter in guessed_letters else '-' for letter in word]
     print(f"Current word: {' '.join(word_list)}")
@@ -84,7 +89,8 @@ def check_guess(user_guess, unique_letters_word):
     """
     Takes the following parameters:
     user_guess: The letter guessed by the user after validation.
-    unique_letters_word: The word set chosen at random from word_list which contains all unique letters in the word.
+    unique_letters_word: The word set chosen at random from word_list
+    which contains all unique letters in the word.
 
     Checks if a user's guess is correct or not.
     Updates the unique_letters_word set variable accordingly.
@@ -107,18 +113,20 @@ def play_hangman(name):
 
     Takes only one parameter: The name of the user
 
-    Each code block is explained using single line comments
+    Each code block is explained using single/multi-line comments
     """
     print_loading()
     print_welcome(name)
 
-    # Create a new hangman game with the defined variables and code each time a new game is started
+    # Uses a while loop to create a new hangman game.
+    # This loop runs each time a new game is started.
     while True:
         word = random_word(word_list)
         unique_letters_word = set(word)
         guessed_letters = set()
         lives = 6
-        #Code in this while loop executes if lives are still left and if there are still letters in the unique_letters_word set
+        # Code in this while loop executes if lives are still left.
+        # Also runs if there are still letters in the unique_letters_word set.
         while lives > 0 and unique_letters_word:
             print_remaining_lives(lives, guessed_letters)
             print_current_word(word, guessed_letters)
@@ -166,4 +174,4 @@ if __name__ == "__main__":
         if name.isalpha():
             play_hangman(name)
         else:
-            print("Please enter only letters")
+            print("Please enter only letters\n")
