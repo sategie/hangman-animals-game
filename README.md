@@ -67,7 +67,14 @@ The game was designed using only the Python language, hence it is not accessible
 
     - The table below shows all the manual testing and validation outcomes that were carried out for this project:
 
-    
+| **Test**              | **Test Action**                                                | **Expected Outcome**                                                                                                                            | **Result** |
+|-----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| Name Input Validation | Enter any other character apart from a letter                  | The user is prompted to enter only letters.                                                                                                     | PASS       |
+| Case Validation       | Enter upper case instead of lower case when guessing a letter  | The upper case is accepted and converted to lower case.                                                                                         | PASS       |
+| Trailing Space        | Enter a trailing space after the last letter                   | The trailing space is ignored and the input is accepted.                                                                                        | PASS       |
+| Multiple Letters      | Enter more than one letter when guessing a letter              | The user is prompted to enter only one letter.<br>Amount of lives is not reduced.                                                               | PASS       |
+| Same Letter           | Enter the same letter which was already guessed                | The user is informed that the letter has already been used.<br>The user is prompted to guess another letter.<br>Amount of lives is not reduced. | PASS       |
+| Replay Game Input     | Enter any other character apart from y or n (lower or capital) | The user is prompted to enter either y or n.                                                                                                    | PASS       |
 
 
 
