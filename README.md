@@ -17,7 +17,7 @@ The game was designed using only the Python language, hence it is not accessible
 
 ![Image of start page of the game in the CLI](/documentation/main-page.png)
 
-- **Game Play**
+- **Gameplay**
 
     - When the user enters the name field, a 'loading...' message appears for 1 second and then a welcome message is displayed to welcome the user.
     - The game begins with 6 lives
@@ -34,5 +34,15 @@ The game was designed using only the Python language, hence it is not accessible
         - If the user chooses to play again, a message appears welcoming the user back to the game.
         - The number of lives resets back to 6 and the letters in a new random word have to be guessed.
         - If a user chooses not to play again, a message appears thanking the user for playing and the game goes back to the main screen and asks the user to enter a name.
+
+![Image showing an example of the actual gameplay](/documentation/gameplay-one.png)
+
+![Image showing an example of the actual gameplay](/documentation/gameplay-two.png)
+
+![Image showing an example of the actual gameplay](/documentation/gameplay-three.png)
+
+![Image showing an example of the actual gameplay](/documentation/gameplay-four.png)
+
+
     
 
