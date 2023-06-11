@@ -55,6 +55,8 @@ The game was designed using only the Python language, hence it is not accessible
 
 - Screenpresso: This was used to make screenshots of the deployed project.
 
+- Tables Generator: This was used to generate the table used in the Testing and Validation section.
+
 - prettier.io: This was used to arrange each word in the words list in order to make them appear on separate lines
 
 ## Testing and Validation
