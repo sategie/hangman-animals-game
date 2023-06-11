@@ -15,7 +15,7 @@ The game was designed using only the Python language, hence it is not accessible
 
     - When the game loads, the user is presented with the title of the game and prompted to enter the name.
 
-![Image of start page of the game in the CLI](/documentation/main-page.png)
+    ![Image of start page of the game in the CLI](/documentation/main-page.png)
 
 - **Gameplay**
 
@@ -42,6 +42,22 @@ The game was designed using only the Python language, hence it is not accessible
 ![Image showing an example of the actual gameplay](/documentation/gameplay-three.png)
 
 ![Image showing an example of the actual gameplay](/documentation/gameplay-four.png)
+
+## Technologies Used
+
+- Python: The programming language in which the game is written
+
+- CodeAnywhere: The IDE used for writing the actual Python code.
+
+- Github: This was used for remote storage and version control.
+
+- Heroku: This was used to deploy the project.
+
+- Screenpresso: This was used to make screenshots of the deployed project.
+
+- prettier.io: This was used to arrange each word in the words list in order to make them appear on separate lines
+
+
 
 
     
