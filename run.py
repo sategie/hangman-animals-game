@@ -158,7 +158,7 @@ def play_hangman(name):
         # Code to display if user does not want to play again
         if play_again != "y":
             print(f"Thanks for playing {name}!\n")
-            print("HANGMAN: Animals Version")
+            print("HANGMAN: Animals Game")
             print("........................")
             name = input("Please enter your name: ").strip()
             play_hangman(name)
