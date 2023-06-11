@@ -15,7 +15,7 @@ The game was designed using only the Python language, hence it is not accessible
 
     - When the game loads, the user is presented with the title of the game and prompted to enter the name.
 
-    ![Image of start page of the game in the CLI](/documentation/start-page.png)
+![Image of start page of the game in the CLI](/documentation/start-page.png)
 
 - **Gameplay**
 
