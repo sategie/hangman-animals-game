@@ -53,4 +53,3 @@ word_list = [
   "cheetah",
   "eagle"
 ]
-
