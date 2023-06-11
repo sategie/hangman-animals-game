@@ -15,7 +15,7 @@ def print_welcome(name):
 
 def print_loading():
     """
-    Function to display the loading sign before the game starts
+    Function to display the loading sign for 1 second before the game starts
     """
     print("loading...")
     time.sleep(1)
