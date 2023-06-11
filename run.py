@@ -10,7 +10,7 @@ def print_welcome(name):
     """
     Function to display a welcome message after the user enters a name
     """
-    print(f"Welcome to the Hangman Animals game, {name}!\n")
+    print(f"Welcome to the Hangman Animals Game, {name}!\n")
 
 
 def print_loading():
@@ -164,7 +164,7 @@ def play_hangman(name):
             play_hangman(name)
         # Code to display if user wants to play again
         else:
-            print(f"\nWelcome back to the Hangman Animals game {name}!\n")
+            print(f"\nWelcome back to the Hangman Animals Game {name}!\n")
 
 # Check if module is run as the main program and run the function
 
