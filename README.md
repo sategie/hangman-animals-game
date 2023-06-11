@@ -57,6 +57,16 @@ The game was designed using only the Python language, hence it is not accessible
 
 - prettier.io: This was used to arrange each word in the words list in order to make them appear on separate lines
 
+## Testing and Validation
+
+- **Code Institute's Python Linter**: No errors were found when the code was checked using the CI Python linter.
+
+![Image showing the results of the testing in the CI Python linter](/documentation/testing/python-testing.png)
+
+- **Testing and Validation Outcomes**
+
+- The table below shows all the manual testing and validation outcomes that were carried out for this project:
+
 
 
 
