@@ -65,7 +65,9 @@ The game was designed using only the Python language, hence it is not accessible
 
 - **Testing and Validation Outcomes**
 
-- The table below shows all the manual testing and validation outcomes that were carried out for this project:
+    - The table below shows all the manual testing and validation outcomes that were carried out for this project:
+
+    
 
 
 

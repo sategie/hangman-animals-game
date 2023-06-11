@@ -170,7 +170,7 @@ def play_hangman(name):
 
 
 if __name__ == "__main__":
-    print("HANGMAN: Animals Version")
+    print("HANGMAN: Animals Game")
     print("........................")
     # Code to prompt user to enter only letters when entering the name
     while True:
