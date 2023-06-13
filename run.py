@@ -82,7 +82,7 @@ def get_user_guess(guessed_letters):
         elif user_letter in guessed_letters:
             print(f"\n'{user_letter}' has already been used. "
                   f"Please guess another letter.")
-        elif not user_letter.isalpha():
+        elif not user_letter.isalpha():0,
             print(f"\n'{user_letter}' is not a letter. Please enter a letter.")
         else:
             return user_letter.lower()
