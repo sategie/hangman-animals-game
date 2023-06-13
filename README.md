@@ -130,3 +130,22 @@ The game was designed using only the Python language, hence it is not accessible
  18. The link to the deployed project is https://hangman-animals-game.herokuapp.com/
 
  
+- **How to Fork the Repository**
+
+    1. Go to the project's Github repository https://github.com/sategie/hangman-animals-game
+
+    2. Click on the *Fork* button on the top right of the screen.
+
+- Note: Changes made here do not affect the original repository.
+
+- **How to Clone the Repository**
+
+    1. Go to the project's Github repository https://github.com/sategie/hangman-animals-game
+
+    2. Click the green *Code* button on the right.
+
+    3. Click on *HTTPS* and copy the link.
+
+    4. Open Git and change the working directory to your preferred location.
+
+    5. Type *git clone* and paste the copied URL.
