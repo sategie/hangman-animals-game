@@ -164,5 +164,9 @@ The game was designed using only the Python language, hence it is not accessible
 
     - Idea for using the time.sleep module was taken from the article "Python sleep(): How to Add Time Delays to Your Code". [See Article Here](https://realpython.com/python-sleep/)
 
-    
+    ## Acknowledgements
+
+    - This project would not have been possible without the assistance from my family. For understanding when I had to work longer hours on the project and for supporting me all the way through.
+
+    - My mentor Brian Macharia has helped me a lot with useful tips not only for this project, but also tips on how to become a better developer. For this, I am very grateful.
 
