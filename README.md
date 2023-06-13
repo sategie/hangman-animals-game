@@ -55,11 +55,11 @@ The game was designed using only the Python language, hence it is not accessible
 
 ![Image showing an example of the actual gameplay](/documentation/gameplay-three.png)
 
-![Image showing an example of the actual gameplay](/documentation/gameplay-four.png)
+![Image showing an example of the actual gameplay](/documentation/gameplay-four.png/
 
 ![Image showing an example of the actual gameplay](/documentation/gameplay-five.png)
-
-## Technologies Used
+ameplay-four.png)
+sed
 
 - Python: The programming language in which the game is written
 
@@ -83,9 +83,7 @@ The game was designed using only the Python language, hence it is not accessible
 
 - **Testing and Validation Outcomes**
 
-    - The table below shows all the manual testing and validation outcomes that were carried out for this project:
-
-    | **Test**                     | **Test Action**                                                   | **Expected Outcome**                                                                                                                                                                                                                                                                                                                                           | **Result** |
+| **Test**                     | **Test Action**                                                   | **Expected Outcome**                                                                                                                                                                                                                                                                                                                                           | **Result** |
 |------------------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
 | Run Program                  | Click on 'Run Program' or the refresh button                      | The game reloads with the game title and name input message.                                                                                                                                                                                                                                                                                                   | PASS       |
 | Enter Name                   | Enter name when prompted by the game                              | A 'loading...' message appears for 1 second.<br>A welcome message appears with the name of the user.<br>The amount of lives(6) displays.<br>An empy list is displayed where all the used letters would be placed.<br>A 'Current word' field is displayed with empty dashes corresponding to the length of the word.<br>The user is prompted to guess a letter. | PASS       |
@@ -100,6 +98,7 @@ The game was designed using only the Python language, hence it is not accessible
 | Multiple Letters Validation  | Enter more than one letter when guessing a letter                 | The user is prompted to enter only one letter.<br>Amount of lives is not reduced.                                                                                                                                                                                                                                                                              | PASS       |
 | Same Letter Validation       | Enter the same letter which was already guessed                   | The user is informed that the letter has already been used.<br>The user is prompted to guess another letter.<br>Amount of lives is not reduced.                                                                                                                                                                                                                | PASS       |
 | Replay Game Input Validation | Enter any other character apart from y or n (lower or capital)    | The user is prompted to enter either y or n.                                                                                                                                                                                                                                                                                                                   | PASS       |
+
 
 - **Unfixed Bugs**
  - While the time.sleep function is being run, any letter typed is displayed on the screen.
