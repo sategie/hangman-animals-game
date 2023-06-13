@@ -85,3 +85,7 @@ The game was designed using only the Python language, hence it is not accessible
 | Same Letter Validation       | Enter the same letter which was already guessed                   | The user is informed that the letter has already been used.<br>The user is prompted to guess another letter.<br>Amount of lives is not reduced.                                                                                                                                                                                                                | PASS       |
 | Replay Game Input Validation | Enter any other character apart from y or n (lower or capital)    | The user is prompted to enter either y or n.                                                                                                                                                                                                                                                                                                                   | PASS       |
 
+- **Unfixed Bugs**
+ - While the time.sleep function is being run, any letter typed is displayed on the screen.
+    - This behaviour can be avoided by waiting until the time.sleep function finishes running.
+
