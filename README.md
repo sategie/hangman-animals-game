@@ -89,3 +89,44 @@ The game was designed using only the Python language, hence it is not accessible
  - While the time.sleep function is being run, any letter typed is displayed on the screen.
     - This behaviour can be avoided by waiting until the time.sleep function finishes running.
 
+## Deployment
+
+- The project was deployed to Heroku using the following steps:
+
+ 1. A newline (\n) was added at the end of the each input function in the code in order for the code to show up in the Code Institute mock terminal.
+
+ 2. Log into Heroku (heroku.com)
+
+ 3. Click on the 9 dots (in a square) on the top right corner and select 'dashboard'.
+
+ 4. Select the 'New ' icon on the top right and select 'Create new app'.
+
+ 5. Give your app a suitable name, choose your region and click on 'Create App'.
+
+ 6. Access the Settings tab and click on 'Reveal Config Vars' under the Config Vars section.
+
+ 7. Add PORT in the 'key' field and 8000 in the 'value' field.
+
+ 8. Click on 'Add Buildpack' in the Buildpacks section.
+
+ 9. Select Python and save changes.
+
+ 10. Select nodejs and save changes.
+
+ 11. Ensure the Python buildback is above the nodejs buildback.
+
+ 12. Go to the Deploy section.
+
+ 13. Select 'Github' as the deployment method.
+
+ 14. Connect to Github and search for the repository name.
+
+ 15. Click on 'Connect' to connect the repository with Heroku.
+
+ 16. Click on 'Enable Automatic Deploys' (This is optional and simply rebuilds the app each time an update is pushed to Github).
+
+ 17. A message appears informing that the app was successfully deployed.
+
+ 18. The link to the deployed project is https://hangman-animals-game.herokuapp.com/
+
+ 
