@@ -9,6 +9,20 @@ The game was designed using only the Python language, hence it is not accessible
 
 ![Image of start page of the game in the CLI](/documentation/start-page.png)
 
+## Contents
+
+- [Features](#features)
+
+- [Technologies Used](#technologies-used)
+
+- [Testing and Validation](#testing-and-validation)
+
+- [Deployment](#deployment)
+
+- [Credits](#credits)
+
+- [Acknowledgements](#acknowledgements)
+
 ## Features
 
 - **Main screen**
