@@ -57,6 +57,8 @@ The game was designed using only the Python language, hence it is not accessible
 
 ![Image showing an example of the actual gameplay](/documentation/gameplay-four.png)
 
+![Image showing an example of the actual gameplay](/documentation/gameplay-five.png)
+
 ## Technologies Used
 
 - Python: The programming language in which the game is written
