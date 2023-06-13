@@ -86,7 +86,7 @@ def get_user_guess(guessed_letters):
             int(f"\n'{user_letter}' is not a letter. Please enter a letter.")
         else:
             return user_letter.lower()
-            
+
 
 def check_guess(user_guess, unique_letters_word):
     """
