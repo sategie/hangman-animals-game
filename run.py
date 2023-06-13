@@ -76,7 +76,7 @@ def get_user_guess(guessed_letters):
     Returns the letter in lower case if the guess is valid
     """
     while True:
-        user_letter = input("Guess a letter: ").strip()
+        user_letter = input("Guess a letter: ").lower().strip()
         if len(user_letter) != 1:
             print(f"\nPlease enter only one letter.")
         elif user_letter in guessed_letters:
