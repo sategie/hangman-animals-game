@@ -149,3 +149,17 @@ The game was designed using only the Python language, hence it is not accessible
     4. Open Git and change the working directory to your preferred location.
 
     5. Type *git clone* and paste the copied URL.
+
+    - Changes to the project can be made by doing the following:
+
+        1. Type *git add*.
+
+        2. Type *git commit -m* and add a short comment inside quotes .e.g git commit -m "This is an example comment".
+
+        3. Type *git push* to push the changes to the repository.
+
+    * Note: Any update committed to the main branch immediately reflects in the hosted site.
+
+    ## Credits
+
+    
