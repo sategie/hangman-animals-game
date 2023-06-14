@@ -9,7 +9,7 @@ The game was designed using only the Python language and some in-built libraries
 
 The project was deployed to Heroku and and runs in a mock terminal which can be viewed in the browser.
 
-![Link to Deployed Project](https://hangman-animals-game.herokuapp.com/)
+[Link to Deployed Project](https://hangman-animals-game.herokuapp.com/)
 
 ![Image of start page of the game in the CLI](/documentation/start-page.png)
 
