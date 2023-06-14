@@ -5,7 +5,7 @@ Each player has a fixed amount of lives and if the word is not guessed before th
 
 This version uses only animals and gives the user a total of 6 lives to guess the correct animal.
 
-The game was designed using only the Python language, hence it is not accessible in a web browser, but rather in the command line interface (CLI).
+The game was designed using only the Python language and some in-built libraries.
 
 ![Image of start page of the game in the CLI](/documentation/start-page.png)
 
