@@ -83,7 +83,7 @@ The project was deployed to Heroku and and runs in a mock terminal which can be 
 
 - **Code Institute's Python Linter**: No errors were found when the code was checked using the CI Python linter.
 
-![Image showing the results of the testing in the CI Python linter](/documentation/testing/python-testing.png)
+![Image showing the results of the testing in the CI Python linter](/documentation/testing/python-linter.png)
 
 - **Testing and Validation Outcomes**
 

@@ -36,13 +36,18 @@ def print_remaining_lives(lives, guessed_letters):
     guessed letters: list of letters already guessed
 
     Prints out a message showing how many lives the user has left.
+    Adjust the print statement if lives are less than two.
     Prints out a list of letters already guessed by the user.
 
     The sorted method in the print statement
     sorts out the guessed letters alphabetically
     """
-    print(f"{lives} lives left. You have used these letters: "
-          f"{sorted([letter for letter in guessed_letters])}")
+    if lives < 2:
+        print(f"{lives} life left. You have used these letters: "
+              f"{sorted([letter for letter in guessed_letters])}")
+    else:
+        print(f"{lives} lives left. You have used these letters: ")
+    f"{sorted([letter for letter in guessed_letters])}"
 
 
 def print_current_word(word, guessed_letters):
