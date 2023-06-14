@@ -36,7 +36,7 @@ def print_remaining_lives(lives, guessed_letters):
     guessed letters: list of letters already guessed
 
     Prints out a message showing how many lives the user has left.
-    Adjust the print statement if lives are less than two.
+    Prints a slightly different message if lives are less than two.
     Prints out a list of letters already guessed by the user.
 
     The sorted method in the print statement
