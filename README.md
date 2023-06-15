@@ -86,6 +86,8 @@ The project was deployed to Heroku and and runs in a mock terminal which can be 
 
 ![Image showing the results of the testing in the CI Python linter](/documentation/testing/python-linter.png)
 
+- **Browsers**: The link to the deployed project runs in a mock terminal which can be accessed via a web browser. This link was tested in *Google Chrome*, *Microsoft Edge* and *Firefox*. The link worked without any issues on all browsers.
+
 - **Testing and Validation Outcomes**
 
 | **Test**                     | **Test Action**                                                   | **Expected Outcome**                                                                                                                                                                                                                                                                                                                                           | **Result** |
