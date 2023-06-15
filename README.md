@@ -65,7 +65,8 @@ The project was deployed to Heroku and and runs in a mock terminal which can be 
 
 ## Technologies Used
 
-- Python: The programming language in which the game is written
+- Python: The programming language in which the game is written. 
+    - The *random* and *time* built-in libraries were imported and used in the project to select random words from the word_list and add a delay at certain points in the game respectively.
 
 - CodeAnywhere: The IDE used for writing the actual Python code.
 
