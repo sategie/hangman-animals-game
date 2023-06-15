@@ -104,8 +104,8 @@ The project was deployed to Heroku and and runs in a mock terminal which can be 
 | Replay Game Input Validation | Enter any other character apart from y or n (lower or capital)    | The user is prompted to enter either y or n.                                                                                                                                                                                                                                                                                                                   | PASS       |
 
 - **Unfixed Bugs**
- - While the time.sleep function is being run, any letter typed is displayed on the screen.
-    - This behaviour can be avoided by waiting until the time.sleep function finishes running.
+    - While the time.sleep function is being run, any letter typed is displayed on the screen.
+        - This behaviour can be avoided by waiting until the time.sleep function finishes running.
 
 ## Deployment
 
