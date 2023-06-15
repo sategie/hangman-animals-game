@@ -46,8 +46,8 @@ def print_remaining_lives(lives, guessed_letters):
         print(f"{lives} life left. You have used these letters: "
               f"{sorted([letter for letter in guessed_letters])}")
     else:
-        print(f"{lives} lives left. You have used these letters: ")
-    f"{sorted([letter for letter in guessed_letters])}"
+        print(f"{lives} lives left. You have used these letters: "
+              f"{sorted([letter for letter in guessed_letters])}")
 
 
 def print_current_word(word, guessed_letters):
@@ -147,7 +147,7 @@ def play_hangman(name):
         # Code to display a message if there are no more lives left
         if lives == 0:
             print("Determining your fate...")
-            time.sleep(2)
+            time.sleep(1)
             print(f"Sorry, you got hanged :( The word was {word}.")
         # Code to display a message if the user guessed the word correctly
         else:
