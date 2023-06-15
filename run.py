@@ -146,8 +146,8 @@ def play_hangman(name):
 
         # Code to display a message if there are no more lives left
         if lives == 0:
-            print("Determining your fate...")
-            time.sleep(1)
+            print("Determining your fate...\n")
+            time.sleep(2)
             print(f"Sorry, you got hanged :( The word was {word}.")
         # Code to display a message if the user guessed the word correctly
         else:
