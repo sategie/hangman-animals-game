@@ -159,7 +159,7 @@ def play_hangman(name):
         while play_again != 'y' and play_again != 'n':
             print(f"Please enter 'y' or 'n'.")
             play_again = input("Do you want to play again? "
-                               "(y/n)").lower().strip()
+                               "(y/n)").lower().strip().replace(" ", "")
         # Code to display if user does not want to play again
         if play_again != "y":
             print(f"Thanks for playing {name}!\n")
@@ -178,9 +178,11 @@ if __name__ == "__main__":
     print("HANGMAN: Animals Game")
     print("........................")
     # Code to prompt user to enter only letters when entering the name
+    # Strip method removes leading white space
+    # Replace method enables spaces to be used in between the name
     while True:
         name = input("Please enter your name: ").strip()
-        if name.isalpha():
+        if name.replace(" ", "").isalpha():
             play_hangman(name)
         else:
             print("Please enter only letters\n")
