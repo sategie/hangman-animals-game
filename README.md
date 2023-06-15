@@ -59,7 +59,7 @@ The project was deployed to Heroku and and runs in a mock terminal which can be 
 
 ![Image showing an example of the actual gameplay](/documentation/gameplay-three.png)
 
-![Image showing an example of the actual gameplay](/documentation/gameplay-four.png/)
+![Image showing an example of the actual gameplay](/documentation/gameplay-four.png)
 
 ![Image showing an example of the actual gameplay](/documentation/gameplay-five.png)
 
